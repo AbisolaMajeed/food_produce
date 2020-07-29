@@ -6,5 +6,6 @@
 			}
 			res.send('Please log in to view this resource');
 			res.redirect('/seller/login');
+			// res.redirect('/buyer/login');
 		}
 	}

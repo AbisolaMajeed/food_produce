@@ -5,8 +5,10 @@
 
 	const session = require('express-session');
 	const passport = require('passport');
+	 // const bpassport = require('passport');
 
 		require('./config/passport')(passport);
+		// require('./config/bpassport')(bpassport);
 
 		const app = express();
 
@@ -25,6 +27,9 @@
 			// Passport middleware
 		app.use(passport.initialize());
 		app.use(passport.session());
+
+		// app.use(bpassport.initialize());
+		// app.use(bpassport.session());
 
 		app.use('/routes', require('./app/routes'));
 

@@ -35,3 +35,15 @@
 				}
 		});
 	}
+
+	exports.buyerDisplayOffers = function(req, res, next) {
+
+		Offer.find({product:req.params.product}, function(err, result){
+
+			if(err){
+				res.send(err);
+			} else {
+				res.send(result);
+			}
+		});
+	}
